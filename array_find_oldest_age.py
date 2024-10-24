@@ -45,7 +45,7 @@ if citizen:
         oldest_person = person
         oldest_age = person["age"]
 
-    if oldest_person is not None:
-        print(f"The oldest person is {oldest_person['name']} with an age of {oldest_person['age']}.")
+if oldest_person is not None:
+    print(f"The oldest person is {oldest_person['name']} with an age of {oldest_person['age']}.")
 else:
     print("No entries.")
