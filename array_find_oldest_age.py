@@ -31,8 +31,21 @@ while True:
         except ValueError:
             print("Invalid input")
 
-    if retry == "n":
+    if retry == "no":
         break
-    elif retry != "y":
+    elif retry != "yes":
         print("Invalid")
+#Find oldest person and print
+if citizen:
+   oldest_person = None
+   oldest_age = -1
 
+   for person in citizen.values():
+    if person["age"] > oldest_age:
+        oldest_person = person
+        oldest_age = person["age"]
+
+    if oldest_person is not None:
+        print(f"The oldest person is {oldest_person['name']} with an age of {oldest_person['age']}.")
+else:
+    print("No entries.")
